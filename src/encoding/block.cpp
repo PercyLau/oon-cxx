@@ -222,7 +222,7 @@ Block::Block(uint32_t type, const Block& value)
 Block
 Block::fromStream(std::istream& is)
 {
-  std::istream_iterator<uint8_t> begin(is >> std::noskipws);
+  std::istream_iterator<uint8_t> begin(is >> std::noskipws);//noskipws ->http://bbs.csdn.net/topics/80469476
   std::istream_iterator<uint8_t> end;
 
   uint32_t type = tlv::readType(begin, end);

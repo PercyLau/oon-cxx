@@ -276,7 +276,6 @@ Data::setSignature(const Signature& signature)
 {
   onChanged();
   m_signature = signature;
-
   return *this;
 }
 

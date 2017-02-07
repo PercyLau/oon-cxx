@@ -96,7 +96,7 @@ Interest::refreshNonce()
   uint32_t oldNonce = getNonce();
   uint32_t newNonce = oldNonce;
   while (newNonce == oldNonce)
-    newNonce = random::generateWord32();
+  newNonce = random::generateWord32();
 
   setNonce(newNonce);
 }
