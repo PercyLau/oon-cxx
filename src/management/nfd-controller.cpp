@@ -50,7 +50,7 @@ Controller::startCommand(const shared_ptr<ControlCommand>& command,
   m_face.expressInterest(interest,
                          bind(&Controller::processCommandResponse, this, _2,
                               command, onSuccess, onFailure),
-                         bind(onFailure, ERROR_TIMEOUT, "request timed out"));
+                         bind(onFailure, ERROR_TIMEOUT, "nfd-controller request timed out"));
 }
 
 void
